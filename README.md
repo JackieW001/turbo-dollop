@@ -15,4 +15,6 @@ Census Urbanization: https://www.census.gov/geo/reference/urban-rural.html
 
 When the user first enters the home page of the website, a scatter plot displaying 50 points (one for each state) relating income levels to the number of a certain type of restauraunt (McDonald's) will be displayed. The user can then use buttons to toggle other restaurants such as Whole Foods, Trader Joes, and other fast food chains, to display on the scatter plot. The user can also toggle the x axis between median income and urbanization. We will use D3 transitions to animate the toggling of each of the axis as we can make the scatter points travel up the y axis based on store count and along the x axis based on income/ urbanization. 
 
+A drawing of the layout is included in this repository, named layout.jpg.
+
 
