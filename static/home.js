@@ -3,29 +3,17 @@ console.log(data);
 
 var svg = document.getElementById("svg");
 
-var info = [
-    {
-	"a": 150,
-	"b": 40,
-    },
-    {
-	"a": 200,
-	"b": 10,
-    }
-
-];
-
 var plot = function(e){
     console.log("plot");
     var cont = d3.select("svg");
-    var circles = cont.selectAll("circle").data(info).enter();
+    var circles = cont.selectAll("circle").data(data).enter();
 
     // circles
     circles.append("circle")
-	.attr("cy", function(d) { return d.a; })
-	.attr("cx", function(d,i) { return d.b; })
-	.attr("r", 20)
-	.attr("fill", "black")
+	.attr("cy", function(d) { return (500 - (d["McDonald's Per 100,000"] * 50));})
+	.attr("cx", function(d) { return ((d["Income"].replace(",", "")) / 150);})
+	.attr("r", function(d) { return Math.sqrt(d["Total Population"].replace(",", "").replace(",", "")) / 250;})
+	.attr("fill", "red")
 
 }
-//plot();
+plot();
