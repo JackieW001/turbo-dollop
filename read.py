@@ -10,7 +10,7 @@ for line in reader:
 for item in list:
     item.pop("Rank")
 
-#print list
+print list
 
 reader = csv.DictReader(open('data/income.csv', 'r'))
 
@@ -18,7 +18,14 @@ income_list = []
 for line in reader:
     income_list.append(line)
 
-print income_list
+#print income_list
 
 for state in income_list:
+    name = state['State']
+    income = state['Median income']
+    for statey in list:
+        if statey['State'] == name:
+            statey['Income'] = income
+
+print list
     
