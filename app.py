@@ -1,4 +1,8 @@
+from flask import Flask, render_template, request
 import csv
+
+my_app = Flask(__name__)
+
 reader = csv.DictReader(open('data/mcd.csv', 'r'))
 
 list = []
@@ -28,4 +32,12 @@ for state in income_list:
             statey['Income'] = income
 
 print list
-    
+
+@my_app.route('/')
+def root():
+    return render_template("home.html", data = list)
+
+
+if __name__ == "__main__":
+    my_app.debug = True
+    my_app.run()

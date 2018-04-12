@@ -1,3 +1,6 @@
+console.log("hello");
+console.log(data);
+
 var svg = document.getElementById("svg");
 
 var info = [
@@ -13,6 +16,7 @@ var info = [
 ];
 
 var plot = function(e){
+    console.log("plot");
     var cont = d3.select("svg");
     var circles = cont.selectAll("circle").data(info).enter();
 
@@ -20,8 +24,8 @@ var plot = function(e){
     circles.append("circle")
 	.attr("cy", function(d) { return d.a; })
 	.attr("cx", function(d,i) { return d.b; })
-	.attr("r", 10)
-	.attr("fill", "red")
+	.attr("r", 20)
+	.attr("fill", "black")
 
 }
-plot();
+//plot();
