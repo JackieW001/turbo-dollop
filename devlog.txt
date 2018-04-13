@@ -1,0 +1,8 @@
+MickieDee Devlog
+Period 8
+
+Thursday April 12, 2018
+-----------------------
+wooJ - 8:33 PM
+Added tooltips to circles
+Added x and y axis with labels
