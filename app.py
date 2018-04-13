@@ -31,7 +31,7 @@ for state in income_list:
         if statey['State'] == name:
             statey['Income'] = income
 
-print list
+#print list
 
 @my_app.route('/')
 def root():

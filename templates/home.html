@@ -2,11 +2,16 @@
 <html>
   <head>
     <title>Restaurants Across the United States</title>
+    <style>
+      #svg {
+      border: 2px solid black;
+      }
+    </style>
   </head>
 
   <body>
     <h1>Restaurants Across the United States</h1>
-    <svg xmlns="https://www.w3.org/2000/svg" width="700" height="500" id="svg"></svg>
+    <svg xmlns="https://www.w3.org/2000/svg" width="1000" height="500" id="svg"></svg>
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script type="text/javascript">
       var data = {{data|tojson}}
