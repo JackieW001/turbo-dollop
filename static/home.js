@@ -52,6 +52,18 @@ var plot = function(e){
     ///////// TEXT ////////////
     var text = cont.selectAll("text").data(data).enter();
 
+    text.append("text")
+	.attr("y", function(d) { return 510-(d["McDonald's Per 100,000"] * 50); })
+	.attr("x", function(d) { return ((d["Income"].replace(",", "")/50) - 720 ); })
+	.attr("text-shadow", "6px 6px grey")
+	.text(function(d) {
+	    if ((Math.sqrt(d["Total Population"].replace(",", "").replace(",", "")) / 100) > 30){
+		return d["State"];
+	    }
+	    return "";
+
+	})
+    
     // X axis text
     text.append("text")
 	.attr("y", 470)
