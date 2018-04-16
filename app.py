@@ -14,6 +14,7 @@ for line in reader:
 for item in list:
     item.pop("Rank")
 
+print "\nMcDonalds list"
 print list
 
 reader = csv.DictReader(open('data/income.csv', 'r'))
@@ -31,11 +32,37 @@ for state in income_list:
         if statey['State'] == name:
             statey['Income'] = income
 
-#print list
+print "\nMedian income list"
+print income_list
 
+reader = csv.DictReader(open('data/2014_16_obesity.csv', 'r'))
+obese_list = []
+for obese in reader:
+    obese_list.append(obese)
+
+#print obese_list
+
+for item in obese_list:
+    item.pop('95% CI')
+
+print "\nObese list"
+print obese_list
+
+for lien in list:
+    lien["Obesity"] = 0
+
+print list
+
+for line in obese_list:
+    for row in list:
+        if line["State"] == row["State"]:
+            row["Obesity"] = line["Prevalence"]
+
+print list
+            
 @my_app.route('/')
 def root():
-    return render_template("home.html", data = list)
+    return render_template("home.html", data = list, incomes = income_list, obese = obese_list)
 
 
 if __name__ == "__main__":

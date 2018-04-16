@@ -1,7 +1,10 @@
 console.log("hello");
 console.log(data);
+console.log(incomes);
+console.log(obese);
 
 var svg = document.getElementById("svg");
+var toggleButt = document.getElementById("toggle");
 
 var plot = function(e){
     var cont = d3.select("svg");
