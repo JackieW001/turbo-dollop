@@ -11,7 +11,7 @@ svg
 
 var incomeButt = document.getElementById("Income");
 var obesityButt = document.getElementById("Obesity");
-
+var densityButt = document.getElementById("Density");
 
 var xscale, yscale, rscale;
 //////// CIRCLES //////////
@@ -106,7 +106,7 @@ function obesity(e) {
       .attr("x", function(d) { return d["Obesity"] * 8.5 + (29.5 * (d["Obesity"] - 17.6)) });*/
 }
 
-incomeButt.addEventListener('click', income)
+incomeButt.addEventListener('click', income);
 
 function income(e) {
     console.log("switching to income");
@@ -121,5 +121,22 @@ function income(e) {
 	    return xscale; });
     xaxis
 	.text("Median Income");
+}
+
+densityButt.addEventListener('click', density);
+
+function density(e) {
+    console.log("switching to density");
+    circles
+	.transition()
+	.duration(2000)
+	.attr("cy", function(d) {
+	    yscale = 690-(d["McDonald's Per 100,000"] * 90);
+	    return yscale; })
+	.attr("cx", function(d) {
+	    xscale = (d["Density"].replace(",", ""))/1.75 + 150;
+	    return xscale; });
+    xaxis
+	.text("Population Density");
 }
     
