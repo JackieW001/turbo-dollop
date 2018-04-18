@@ -11,6 +11,9 @@ for line in reader:
 
 #print list
 
+for i in list:
+    i["Total Population"] = int(i["Total Population"].replace(",",""))
+    
 for item in list:
     item.pop("Rank")
 
@@ -71,7 +74,8 @@ print list
             
 @my_app.route('/')
 def root():
-    return render_template("home.html", data = list, incomes = income_list, obese = obese_list)
+    sorted_list = sorted(list, key=lambda d: d['Total Population'], reverse=True)
+    return render_template("home.html", data = sorted_list, incomes = income_list, obese = obese_list)
 
 for row in list:
     print row["Density"]
