@@ -26,7 +26,7 @@ var circles = svg.selectAll("circle")
 	xscale = (d["Income"].replace(",", ""))/50 - 700;
 	return xscale; })
     .attr("r", function(d) {
-	rscale = Math.sqrt(d["Total Population"].replace(",", "").replace(",", "")) / 100;
+	rscale = Math.sqrt(d["Total Population"]) / 100;
 	return rscale;})
     .attr("fill", "rgba(0,0,255,0.25)")
     .attr("stroke", "rgba(0,0,255,1)")
@@ -39,7 +39,9 @@ circles
     .text(function(d) { return d["State"] + "\n" +
 			"Population: " + d["Total Population"] + "\n" +
 			"Median Income: $" + d["Income"] + "\n" +
-			"McDonald's Per Capita: " +  d["McDonald's Per 100,000"]
+			"McDonald's Per 100,000 Population: " +  d["McDonald's Per 100,000"]
+			"Obesity Prevalence: " + d["Obesity"] + "%"
+			"Population Density: " + d["Density"] + " Population Per Square Mile" 
 			; });
 console.log(circles);
 
