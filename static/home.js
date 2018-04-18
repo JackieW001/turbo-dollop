@@ -60,27 +60,14 @@ svg.append("line")
     .attr("x2", 900)
     .attr("y2", 450);
 
-/*///////// TEXT ////////////
-  svg.append("text")
-  .attr("y", function(d) { return 695 -(d["McDonald's Per 100,000"] * 90); })
-  .attr("x", function(d) { return (d["Income"].replace(",", ""))/50 - 3.5*(d["State"].length) - 700; })
-  .attr("text-shade", "6px 6px grey")
-  .text(function(d) {
-  if ((Math.sqrt(d["Total Population"].replace(",", "").replace(",", "")) / 100) > 25){
-  return d["State"];
-  }
-  return "";
-
-  })*/
-
 // X axis text
-var xaxis = svg.append("text")
+var xAxisText = svg.append("text")
     .attr("x", 500)
     .attr("y", 470)
     .text("Median Income");
 
 // Y axis text
-svg.append("text")
+var yAxisText = svg.append("text")
     .attr("transform", "translate(940,150)rotate(90)")
     .attr("x", 10)
     .attr("y", 10)
@@ -97,13 +84,8 @@ function obesity(e) {
 	.attr('cx', function(d) {
 	    xscale = (d["Obesity"] * 8.5 + (29.5 * (d["Obesity"] - 17.6)));
 	    return xscale; })
-    xaxis
+    xAxisText
 	.text("Obesity");
-    /*text
-      .transition()
-      .duration(2000)
-      .attr("y", function(d) { return 695 -(d["McDonald's Per 100,000"] * 90); })
-      .attr("x", function(d) { return d["Obesity"] * 8.5 + (29.5 * (d["Obesity"] - 17.6)) });*/
 }
 
 incomeButt.addEventListener('click', income);
@@ -113,13 +95,10 @@ function income(e) {
     circles
 	.transition()
 	.duration(2000)
-	.attr("cy", function(d) {
-	    yscale = 690-(d["McDonald's Per 100,000"] * 90);
-	    return yscale; })
 	.attr("cx", function(d) {
 	    xscale = (d["Income"].replace(",", ""))/50 - 700;
 	    return xscale; });
-    xaxis
+    xAxisText
 	.text("Median Income");
 }
 
@@ -130,13 +109,10 @@ function density(e) {
     circles
 	.transition()
 	.duration(2000)
-	.attr("cy", function(d) {
-	    yscale = 690-(d["McDonald's Per 100,000"] * 90);
-	    return yscale; })
 	.attr("cx", function(d) {
 	    xscale = (d["Density"].replace(",", ""))/1.75 + 150;
 	    return xscale; });
-    xaxis
+    xAxisText
 	.text("Population Density");
 }
     
