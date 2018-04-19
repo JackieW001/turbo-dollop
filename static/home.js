@@ -58,7 +58,7 @@ svg.append("line")
 svg.append("line")
     .style("stroke", "black")
     .attr("x1", 900)
-    .attr("y1", 50)
+    .attr("y1", 20)
     .attr("x2", 900)
     .attr("y2", 450);
 
@@ -68,9 +68,19 @@ var xAxisText = svg.append("text")
     .attr("y", 470)
     .text("Median Income");
 
+var xAxisLower = svg.append("text")
+    .attr("x", 910)
+    .attr("y", 450)
+    .text("0");
+
+var xAxisUpper = svg.append("text")
+    .attr("x", 910)
+    .attr("y", 70)
+    .text("7");
+
 // Y axis text
 var yAxisText = svg.append("text")
-    .attr("transform", "translate(940,150)rotate(90)")
+    .attr("transform", "translate(940,120)rotate(90)")
     .attr("x", 10)
     .attr("y", 10)
     .text("Number of McDonalds Per Capita");
