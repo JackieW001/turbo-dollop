@@ -33,17 +33,18 @@ var circles = svg.selectAll("circle")
     .attr("stroke-width", 2)
     .attr("onmouseover","evt.target.setAttribute('fill','rgba(255,0,0,0.25)'); evt.target.setAttribute('stroke','rgba(255,0,0,1)')")
     .attr("onmouseout","evt.target.setAttribute('fill','rgba(0,0,255,0.25)'); evt.target.setAttribute('stroke', 'rgba(0,0,255,1)')")
+
 // tooltip
 circles
     .append("svg:title")
     .text(function(d) { return d["State"] + "\n" +
 			"Population: " + d["Total Population"] + "\n" +
 			"Median Income: $" + d["Income"] + "\n" +
-			"McDonald's Per 100,000 Population: " +  d["McDonald's Per 100,000"]
-			"Obesity Prevalence: " + d["Obesity"] + "%"
+			"McDonald's Per 100,000 Population: " +  d["McDonald's Per 100,000"] + "\n" +
+			"Obesity Prevalence: " + d["Obesity"] + "%" + "\n" +
 			"Population Density: " + d["Density"] + " Population Per Square Mile" 
 			; });
-console.log(circles);
+
 
 //////// LINES ///////////
 // horizontal line at bottom
