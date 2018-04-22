@@ -1,4 +1,4 @@
-# turbo-dollop
+# Mickiedees
 We aim to show how the income or urbanization of a state correlates to the density of certain restuarants/stores in that state. For example, we predict that poorer states may have more McDonald's per capita than richer states do per capita. Similarily, richer states will likely have more Whole Foods, or other high end supermarkets, than poor states. Our visualization will allow the user to explore the correlation between these two variables. 
 
 Income, population, and urbanization data can be easily obtained from government sources (like the Census). Companies publish data about store location, so that should not be too hard to find.
