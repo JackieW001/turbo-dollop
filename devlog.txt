@@ -1,6 +1,22 @@
 MickieDee Devlog
 Period 8
 
+Friday April 20, 2018
+---------------------
+wooJ - 3:45 PM
+Worked on website aesthetics - background color, buttons, fonts
+
+Thursday April 19, 2018
+---------------------
+wooJ - 2:25 PM
+Sorted python dictonary based on 'Total Population'
+Smaller circles now in front of larger circles
+
+Wednesday April 18, 2018
+------------------------
+wooJ - 1:45 PM
+Added Y axis labels
+
 Thursday April 12, 2018
 -----------------------
 wooJ - 8:33 PM
