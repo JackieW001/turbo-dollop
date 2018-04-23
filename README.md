@@ -31,11 +31,11 @@ $ pip install flask
 ```
 $ python app.py
 ```
-4. Run in your web browser, using either the url provided upon launching the flask app (scroll up in the terminal to find it), or by typing in "localhost:5000"
+4. Run in your web browser, using either the url provided upon launching the flask app (scroll up in the terminal to find it), or by typing "localhost:5000" into the address bar
 
 # Things to Note
 We could not find data for Washington, D.C. that was easy to consolidate, so we did not include it.
 
 There are text boxes that pop up when you hover over a circle on the graph for long enough.
 
-
+In Safari, the first map (of McDonald's density) has trouble loading its scripts and css if the user is not using incognito mode. We have not been able to figure out what the issue is, but there is no problem in Safari private browsing. Additionally, the app works in Google Chrome, regardless of whether incognito/private browsing mode is on or not.
