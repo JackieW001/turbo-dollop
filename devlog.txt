@@ -5,6 +5,8 @@ Sunday April 22, 2018
 ---------------------
 leksanovD - 10:08 PM
 Added a functional, interactive United States map that displays the McDonald's density of each state
+leksanovD - 10:55 PM
+Added a similar map that carries out the same function, but for Whole Foods
 
 Friday April 20, 2018
 ---------------------
