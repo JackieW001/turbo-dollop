@@ -102,7 +102,7 @@ def map():
 @my_app.route('/wfmap')
 def wfmap():
     sorted_list = sorted(wflist, key=lambda d: d['Total Population'], reverse=True)
-    return render_template("wfmap.html", data = sorted_list)
+    return render_template("wfmap.html", wfdata = sorted_list)
 
 #for row in list:
 #    print row["Density"]

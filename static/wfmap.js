@@ -1,3 +1,5 @@
+var data = wfdata
+
 var pic = document.getElementById("us-map");
 var usa = pic.getElementById("outlines");
 var states = usa.getElementsByTagName("path");
