@@ -15,10 +15,6 @@ path:hover, circle:hover {
   cursor: pointer;
 }
 
-#FL {
-	fill: orange !important;
-}
-
 #info-box {
     display: none;
     position: absolute;

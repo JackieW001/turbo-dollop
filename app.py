@@ -77,6 +77,11 @@ def root():
     sorted_list = sorted(list, key=lambda d: d['Total Population'], reverse=True)
     return render_template("home.html", data = sorted_list, incomes = income_list, obese = obese_list)
 
+@my_app.route('/map')
+def map():
+    sorted_list = sorted(list, key=lambda d: d['Total Population'], reverse=True)
+    return render_template("map.html", data = sorted_list)
+
 for row in list:
     print row["Density"]
 
