@@ -7,6 +7,9 @@ leksanovD - 10:08 PM
 Added a functional, interactive United States map that displays the McDonald's density of each state
 leksanovD - 10:55 PM
 Added a similar map that carries out the same function, but for Whole Foods
+johnstonC - 11 PM
+Integrated Whole Foods Data
+Updated HTML
 
 Friday April 20, 2018
 ---------------------
@@ -25,6 +28,8 @@ Wednesday April 18, 2018
 ------------------------
 wooJ - 1:45 PM
 Added Y axis labels
+johnston C - 8:47 PM
+Bug fixes!
 
 Tuesday April 17, 2018
 ------------------------
@@ -32,6 +37,8 @@ wooJ - 1:45 PM
 Added Y axis labels
 leksanovD - 11:25 PM
 Added a Python function and button that shifts the data to reflect population density
+johnstonC - 11:50 PM
+Added transition effect
 
 Friday April 13, 2018
 -----------------------
@@ -40,9 +47,13 @@ Figured out a way to combine multiple csv "dictionaries" into one
 wooJ - 8:33 PM
 Added tooltips to circles
 Added x and y axis with labels
+johnstonC - 11:00 PM
+Created first chart of Mcdonalds vs Income
 
 Thursday April 12, 2018
 -----------------------
 wooJ - 8:33 PM
 Added tooltips to circles
 Added x and y axis with labels
+johnstonC - 9:00 PM
+Worked on flask, and python to read data from formatted csvs
