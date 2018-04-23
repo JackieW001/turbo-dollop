@@ -12,6 +12,8 @@ svg
 var incomeButt = document.getElementById("Income");
 var obesityButt = document.getElementById("Obesity");
 var densityButt = document.getElementById("Density");
+var mcdButt = document.getElementById("mcd");
+var wfButt = document.getElementById("wf");
 
 var xscale, yscale, rscale;
 //////// CIRCLES //////////
@@ -42,7 +44,8 @@ circles
 			"Median Income: $" + d["Income"] + "\n" +
 			"McDonald's Per 100,000 Population: " +  d["McDonald's Per 100,000"] + "\n" +
 			"Obesity Prevalence: " + d["Obesity"] + "%" + "\n" +
-			"Population Density: " + d["Density"] + " Population Per Square Mile" 
+			"Population Density: " + d["Density"] + " Population Per Square Mile" + "\n" +
+			"Whole Foods per 100,000 Population: " + d["Whole Foods Per 100,000"]
 			; });
 
 
@@ -72,7 +75,7 @@ var xAxisText = svg.append("text")
 var xAxisLower = svg.append("text")
     .attr("x", 910)
     .attr("y", 450)
-    .text("0");
+    .text("3.3");
 
 var xAxisUpper = svg.append("text")
     .attr("x", 910)
@@ -82,9 +85,9 @@ var xAxisUpper = svg.append("text")
 // Y axis text
 var yAxisText = svg.append("text")
     .attr("transform", "translate(940,120)rotate(90)")
-    .attr("x", 10)
+    .attr("x", -10)
     .attr("y", 10)
-    .text("Number of McDonalds Per Capita");
+    .text("Number of McDonalds Per 100,000 People");
 
 obesityButt.addEventListener('click', obesity);
 
@@ -127,5 +130,44 @@ function density(e) {
 	    return xscale; });
     xAxisText
 	.text("Population Density");
+}
+
+
+wfButt.addEventListener('click', wf);
+
+function wf(e) {
+    console.log("switching to wf");
+    circles
+	.transition()
+	.duration(2000)
+	.attr("cy", function(d) {
+	    return 400 -(d["Whole Foods Per 100,000"] * 744);
+	});
+    yAxisText
+	.text("Number of Whole Foods Per 100,000 People");
+    xAxisUpper
+	.text(".5");
+    xAxisLower
+	.text("0");
+    
+}
+
+mcdButt.addEventListener('click', mcd);
+
+function mcd(e) {
+    console.log("switching to mcd");
+    circles
+	.transition()
+	.duration(2000)
+	.attr("cy", function(d) {
+	    yscale = 690-(d["McDonald's Per 100,000"] * 90);
+	    return yscale;
+	});
+    yAxisText
+	.text("Number of McDonald's Per 100,000 People");
+    xAxisLower
+	.text("3.3");
+    xAxisUpper
+	.text("7");
 }
     

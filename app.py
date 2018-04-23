@@ -70,24 +70,28 @@ for item in reader:
         if item['STATE_OR_REGION'] == row["State"]:
             row["Density"] = item["2010_DENSITY"]
 
-print list
+#print list
 
 reader = csv.DictReader(open('data/wf.csv', 'r'))
 
 wflist = []
 for line in reader:
     wflist.append(line)
-
+#
 #print list
 
 for i in wflist:
     i["Total Population"] = int(i["Total Population"].replace(",",""))
+    print i
+    for row in list:
+        if row["State"] == i["State"]:   
+            row["Whole Foods Per 100,000"] = i["Whole Foods Per 100,000"]
     
 for item in wflist:
     item.pop("Rank")
 
 #print "\nMcDonalds list"
-print wflist
+#print wflist
             
 @my_app.route('/')
 def root():
@@ -109,6 +113,11 @@ def wfmap():
 
 #for row in wflist:
 #    print row["Density"]
+
+#print list
+print "wf"
+for row in list:
+    print row["Whole Foods Per 100,000"];
 
 if __name__ == "__main__":
     my_app.debug = True
