@@ -31,6 +31,7 @@ $ pip install flask
 ```
 $ python app.py
 ```
+4. Run in your web browser, using either the url provided upon launching the flask app (scroll up in the terminal to find it), or by typing in "localhost:5000"
 
 # Things to Note
 We could not find data for Washington, D.C. that was easy to consolidate, so we did not include it.
