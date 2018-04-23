@@ -17,4 +17,23 @@ When the user first enters the home page of the website, a scatter plot displayi
 
 A drawing of the layout is included in this repository, named layout.jpg.
 
+# Usage Instructions
+1. Create and activate up a virtual environment
+```
+$ virtualenv lebron
+$ . lebron/bin/activate
+```
+2. Install Flask by use of Pip
+```
+$ pip install flask
+```
+3. Run the app by use of Python (NOTE: make sure that you are not using version Python 3.0 or later)
+```
+$ python app.py
+```
+
+# Things to Note
+We could not find data for Washington, D.C. that was easy to consolidate, so we did not include it.
+There are text boxes that pop up when you hover over a circle on the graph for long enough.
+
 
