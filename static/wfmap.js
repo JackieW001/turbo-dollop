@@ -26,12 +26,11 @@ var colorState = function(a){
     
     for(i = 0; i < 50; i++){
 	if(data[i]["State"] == states[a].id){
-	    McDensity = parseFloat(data[i]["McDonald's Per 100,000"]);
-	    McDensity /= 8;
-	    McDensity *= 95;
+	    McDensity = parseFloat(data[i]["Whole Foods Per 100,000"]);
+	    McDensity *= 125;
 	    McColor = 100 - McDensity;
-	    states[a].style.fill = "hsl(208, 100%, " + McColor + "%)";
-	    states[a].innerText = data[i]["McDonald's Per 100,000"];
+	    states[a].style.fill = "hsl(300, 100%, " + McColor + "%)";
+	    states[a].innerText = data[i]["Whole Foods Per 100,000"];
 	    //var McDensityAtt = states[a].createAttribute("McDensity");
 	    //McDensityAtt = data[i]["McDonald's Per 100,000"]
 	    //states[a].setAttributeNode(
@@ -49,7 +48,7 @@ for(k = 0; k < 50; k++){
 var l;
 for(l = 0; l < 50; l++){
     states[l].addEventListener("mouseover", function(){
-	    stateDisplay.innerHTML = "McD's per 100,000 in " + this.id + ": "  + this.innerText;
+	    stateDisplay.innerHTML = "Whole Foods per 100,000 in " + this.id + ": "  + this.innerText;
 	});
 }
 

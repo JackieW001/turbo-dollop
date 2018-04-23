@@ -71,6 +71,23 @@ for item in reader:
             row["Density"] = item["2010_DENSITY"]
 
 print list
+
+reader = csv.DictReader(open('data/wf.csv', 'r'))
+
+wflist = []
+for line in reader:
+    wflist.append(line)
+
+#print list
+
+for i in wflist:
+    i["Total Population"] = int(i["Total Population"].replace(",",""))
+    
+for item in wflist:
+    item.pop("Rank")
+
+#print "\nMcDonalds list"
+print wflist
             
 @my_app.route('/')
 def root():
@@ -82,8 +99,16 @@ def map():
     sorted_list = sorted(list, key=lambda d: d['Total Population'], reverse=True)
     return render_template("map.html", data = sorted_list)
 
-for row in list:
-    print row["Density"]
+@my_app.route('/wfmap')
+def wfmap():
+    sorted_list = sorted(wflist, key=lambda d: d['Total Population'], reverse=True)
+    return render_template("wfmap.html", data = sorted_list)
+
+#for row in list:
+#    print row["Density"]
+
+#for row in wflist:
+#    print row["Density"]
 
 if __name__ == "__main__":
     my_app.debug = True

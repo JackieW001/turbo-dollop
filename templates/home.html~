@@ -19,6 +19,16 @@
     <p> Hover over a circle to display more data </p>
     <br><br><br>
     
+    <form action="/map">
+      <button type="submit">McDonald's Density Map</button>
+    </form>
+
+    <br><br>
+    
+    <form action="/wfmap">
+      <button type="submit">Whole Foods Density Map</button>
+    </form>
+
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script type="text/javascript">
       var data = {{data|tojson}}
