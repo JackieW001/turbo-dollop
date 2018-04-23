@@ -33,7 +33,7 @@ $ python app.py
 ```
 
 # Things to Note
-We could not find data for Washington, D.C. that was easy to consolidate, so we did not include it.
+We could not find data for Washington, D.C. that was easy to consolidate, so we did not include it.\n
 There are text boxes that pop up when you hover over a circle on the graph for long enough.
 
 
