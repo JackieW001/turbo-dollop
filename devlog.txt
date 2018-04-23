@@ -1,10 +1,17 @@
 MickieDee Devlog
 Period 8
 
+Sunday April 22, 2018
+---------------------
+leksanovD - 10:08 PM
+Added a functional, interactive United States map that displays the McDonald's density of each state
+
 Friday April 20, 2018
 ---------------------
 wooJ - 3:45 PM
 Worked on website aesthetics - background color, buttons, fonts
+leksanovD - 2:05 PM
+Figured out how to integrate the United States map and make it scrollable
 
 Thursday April 19, 2018
 ---------------------
@@ -16,6 +23,21 @@ Wednesday April 18, 2018
 ------------------------
 wooJ - 1:45 PM
 Added Y axis labels
+
+Tuesday April 17, 2018
+------------------------
+wooJ - 1:45 PM
+Added Y axis labels
+leksanovD - 11:25 PM
+Added a Python function and button that shifts the data to reflect population density
+
+Friday April 13, 2018
+-----------------------
+leksanovD - 1:50 PM
+Figured out a way to combine multiple csv "dictionaries" into one
+wooJ - 8:33 PM
+Added tooltips to circles
+Added x and y axis with labels
 
 Thursday April 12, 2018
 -----------------------
